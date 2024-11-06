@@ -1,0 +1,20 @@
+name = "inf_primes"
+version = "0.1.0"
+keywords = ["math"]
+defaultTargets = ["InfPrimes"]
+moreLinkArgs = ["-L./.lake/packages/LeanCopilot/.lake/build/lib", "-lctranslate2"]
+
+[leanOptions]
+pp.unicode.fun = true # pretty-prints `fun a ↦ b`
+autoImplicit = false
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+
+[[lean_lib]]
+name = "InfPrimes"
+
+
+[dependencies]
+LeanCopilot = { git = "https://github.com/lean-dojo/LeanCopilot.git", rev = "main" }
